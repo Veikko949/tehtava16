@@ -27,8 +27,8 @@ namespace tehtava16
                 minuuti_comboBox.Items.Add(i.ToString());
                 sekuntti_comboBox.Items.Add(i.ToString());
             }
-            minuuti_comboBox.SelectedIndex = 30;
-            sekuntti_comboBox.SelectedIndex = 0;
+            minuuti_comboBox.SelectedIndex = 0;
+            sekuntti_comboBox.SelectedIndex = 10;
         }
 
         private void aloita_button_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace tehtava16
             {
                 kokoaika --;
                 int minuuti = kokoaika / 60;
-                int sekunnit = kokoaika = (minuuti * 60);
+                int sekunnit = kokoaika - (minuuti * 60);
                 ajastin_label.Text = minuuti.ToString() + ":" + sekunnit.ToString();
             }
             else
